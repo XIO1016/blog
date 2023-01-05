@@ -24,6 +24,7 @@
               :github-url="item.github"
               :tag1="item.tech1"
               :tag2="item.tech2"
+                            :period="item.period"
             />
           </div>
         </div>

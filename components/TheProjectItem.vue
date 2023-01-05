@@ -21,6 +21,10 @@
         <p>
           {{ projectCaption }}
         </p>
+        <p>
+          {{ period }}
+        </p>
+
         <button v-if="readMore !== null" class="info btn">
           <a :href="readMore">Read More</a>
         </button>
@@ -120,6 +124,11 @@ export default {
       default: null
     },
     tag2: {
+      type: [String],
+      required: true,
+      default: null
+    },
+    period: {
       type: [String],
       required: true,
       default: null
