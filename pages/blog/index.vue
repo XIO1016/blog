@@ -24,7 +24,7 @@
       </nav>
     </div>
     <div class="max-w-7xl grid grid-cols-1 md:grid-cols-1 mt-4 md:mt-6 mb-8 md:mb-14">
-      <div class="px-6 md:px-6 group" v-for="article of articles" :key="article">
+      <div class="px-6 md:px-6 group" v-for="article of articlesByCategories" :key="article" >
         <nuxt-link :to="{path: `/blog/${article.slug}`}">
           <div class="article-inner flex border-b py-6 md:py-8 border-gray-200">
             <div class="h-content hidden md:block">
@@ -32,9 +32,9 @@
                 <img
                   v-if="`${article.img}` == undefined || `${article.img}` == null || `${article.img}` == 'null' || `${article.img}` == 'undefined'"
                   class="profile h-full group-hover:scale-105 transition duration-300"
-                  :src="require(`~/static/${article.category}.jpg`)" alt="">
+                  :src="require(`~/static/blog/${article.category}.jpg`)" alt="">
                 <img v-else class="profile h-full group-hover:scale-105 transition duration-300"
-                     :src="require(`~/static/${article.slug}/${article.img}`)" alt="">
+                     :src="require(`~/static/blog/${article.img}`)" alt="">
               </div>
             </div>
             <div class="px-0 md:px-4 md:pl-9">
