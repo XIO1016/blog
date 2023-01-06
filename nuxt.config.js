@@ -59,25 +59,8 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/content", "@nuxtjs/svg", "@nuxt/image",'@nuxtjs/sitemap'],
-  sitemap: {
-    hostname: 'https://xio1016.site',
-    gzip: true,
-    // exclude: [
-    //   '/secret',
-    //   '/admin/**'
-    // ],
-    routes: [
-      '/blog',
-      '/study',
-      {
-        url: '/page/3',
-        changefreq: 'daily',
-        priority: 1,
-        lastmod: '2023-01-06T12:30:00.000Z'
-      }
-    ]
-  },
+  modules: ["@nuxt/content", "@nuxtjs/svg", "@nuxt/image"],
+
   svg: {
     vueSvgLoader: {
       // vue-svg-loader options
