@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      { hid: "description", name: "description", content: "xio1016 블로그" },
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [
@@ -41,7 +41,6 @@ export default {
   plugins: [
     { src: '~/plugins/vuetyper.js', ssr: false},
     { src: '~/plugins/math.js', ssr: false},
-    { src: '~/plugins/vue-particles.js', ssr: false},
     { src: '~/plugins/vue-real-wave.js', ssr: false},
   ],
 
@@ -60,7 +59,25 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/content", "@nuxtjs/svg", "@nuxt/image"],
+  modules: ["@nuxt/content", "@nuxtjs/svg", "@nuxt/image",'@nuxtjs/sitemap'],
+  sitemap: {
+    hostname: 'https://xio1016.site',
+    gzip: true,
+    // exclude: [
+    //   '/secret',
+    //   '/admin/**'
+    // ],
+    routes: [
+      '/blog',
+      '/study',
+      {
+        url: '/page/3',
+        changefreq: 'daily',
+        priority: 1,
+        lastmod: '2023-01-06T12:30:00.000Z'
+      }
+    ]
+  },
   svg: {
     vueSvgLoader: {
       // vue-svg-loader options
