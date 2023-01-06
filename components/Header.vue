@@ -1,7 +1,6 @@
 <template>
 
   <div class="w-full p-3">
-    <meta name="naver-site-verification" content="ed1ac3b96b06466bb74fe8cfce24dfee8dd57b1c" />
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4">
       <div class="max-w-fit md:ml-0 hover:animate-wiggle hover:drop-shadow">
         <nuxt-link to="/">

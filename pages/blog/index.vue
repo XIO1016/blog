@@ -105,6 +105,10 @@ export default {
         name: "description",
         content: "XIO's Story",
       },
+      {
+        name:"naver-site-verification",
+        content:"ed1ac3b96b06466bb74fe8cfce24dfee8dd57b1c"
+      }
     ],
     link: [{rel: "icon", type: "image/x-icon", href: "/favicon.ico"}],
   },
