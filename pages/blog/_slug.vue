@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="mt-8 flex items-center justify-center mx-auto text-center">
-        <div v-if="`${article.tags}` == 'PSAI'" class="text-center ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-blue-400 rounded font-normal">{{article.tags}}</div>
+        <div v-if="`${article.tags}` == 'reading'" class="text-center ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-blue-400 rounded font-normal">{{article.tags}}</div>
         <div v-else-if="`${article.tags}` == 'retrospect'"  class="text-center ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-emerald-500 rounded font-normal">{{article.tags}}</div>
         <div v-else > </div>
     </div>
