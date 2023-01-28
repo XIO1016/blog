@@ -1,0 +1,12 @@
+name: '스프링 입문하기'
+description: '"예제로 보는 스프링 프레임워크 입문"을 보며 스프링의 주요 철학과 기능을 빠르게 학습합니다.'
+slug: spring-enter
+img: spring-enter.png
+order: 3
+category: [
+  "0. Intro",
+  "1. Inversion of Control",
+  "2. Aspect Oriented Programming",
+  "3. Portable Service Abstraction"
+  ]
+state: '0'

@@ -139,11 +139,11 @@ export default {
     },
     mounted() {
         document.addEventListener("keydown", e => {
-        if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
+        if (e.keyCode === 27 && this.isOpen) this.isOpen = false;
         });
     },
 async asyncData({ $content, params }) {
-        const curriculumName = 'computer-network';
+        const curriculumName = 'spring-enter';
         const curriname = await $content(curriculumName, params.slug)
         .fetch();
         const currilist = await $content('studies')
@@ -153,7 +153,7 @@ async asyncData({ $content, params }) {
         let cats = {}
         for (let i = 1; i<11; i++) {
             cats[`cat_${i}`] = currilist[0]["category"][i-1];
-        };
+        }
         let lists = {}
         for (let i = 1; i<11; i++) {
             lists[`list_${i}`] = await $content(curriculumName)
@@ -196,11 +196,6 @@ code::after {
 }
 img{
     margin: auto;
-}
-.nav-item:hover,
-.nav-item:active,
-.nav-item.nuxt-link-active {
-    color: #3b82f6;
 }
 
 </style>

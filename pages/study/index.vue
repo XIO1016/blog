@@ -21,16 +21,16 @@
               <div class="absolute bottom-0 w-full h-full bg-gradient-to-t from-zinc-600 rounded-lg"></div>
               <div class="absolute bottom-0 w-full py-6 px-6">
                 <div class="flex">
-                  <div v-if="`${study.state}` == '100'"
+                  <div v-if="`${study.state}` === '100'"
                        class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-blue-500 rounded font-normal">100%
                   </div>
-                  <div v-else-if="`${study.state}` == '75'"
+                  <div v-else-if="`${study.state}` === '75'"
                        class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-emerald-500 rounded font-normal">75%
                   </div>
-                  <div v-else-if="`${study.state}` == '50'"
+                  <div v-else-if="`${study.state}` === '50'"
                        class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-orange-500 rounded font-normal">50%
                   </div>
-                  <div v-else-if="`${study.state}` == '20'"
+                  <div v-else-if="`${study.state}` === '20'"
                        class="ml-2 px-1.5 py-1 text-xs md:text-xs text-white bg-yellow-500 rounded font-normal">20%
                   </div>
                   <div v-else></div>
@@ -87,11 +87,6 @@ export default {
   word-break: keep-all;
 }
 
-.inner {
-  box-sizing: border-box;
-  position: relative;
-}
-
 .keep-all {
   word-break: keep-all;
 }
@@ -100,20 +95,12 @@ export default {
   overflow: hidden;
 }
 
-.square-box {
-  overflow: hidden;
-}
-
-.profile {
-  object-fit: cover;
-  /* overflow: hidden; */
-}
 .bg-img {
   background-position: center;
   background-repeat:  no-repeat;
   /* background-attachment: fixed; */
   background-size:  cover;
   background-color: #000000;
-  background-image: url(../../assets/images/computer-network.jpg)
+  background-image: url(../../assets/images/spring-enter.png)
 }
 </style>
