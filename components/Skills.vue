@@ -5,18 +5,18 @@
 
       <div class="skill-set">
         <div class="card">
-          <div class="item">
-            <img src="@/assets/images/skills-assets/AWS.svg" />
-            <span>AWS</span>
-          </div>
-          <div class="item">
-            <img src="@/assets/images/skills-assets/Docker.png" />
-            <span>Docker</span>
-          </div>
-          <div class="item">
-            <img src="@/assets/images/skills-assets/Kubernetes.svg" />
-            <span>Kubernetes</span>
-          </div>
+<!--          <div class="item">-->
+<!--            <img src="@/assets/images/skills-assets/AWS.svg" />-->
+<!--            <span>AWS</span>-->
+<!--          </div>-->
+<!--          <div class="item">-->
+<!--            <img src="@/assets/images/skills-assets/Docker.png" />-->
+<!--            <span>Docker</span>-->
+<!--          </div>-->
+<!--          <div class="item">-->
+<!--            <img src="@/assets/images/skills-assets/Kubernetes.svg" />-->
+<!--            <span>Kubernetes</span>-->
+<!--          </div>-->
           <div class="item">
             <img src="@/assets/images/skills-assets/Git.svg" />
             <span>Git</span>
