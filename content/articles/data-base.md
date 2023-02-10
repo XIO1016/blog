@@ -1,6 +1,6 @@
 ---
-title: [데이터베이스 설계] Database Design Using the E-R Model(1)
-slug: databasedesign
+title: 데이터베이스 설계) Database Design Using the E-R Model(1)
+slug: data-base
 category: CS
 date: 2023.02.01
 description: 데이터베이스 설계 기초
@@ -11,9 +11,9 @@ visibility: true
 
 _이 글은 "Database System Concepts, 7th edition"을 바탕으로 작성되었습니다._
 
-#### **1\. Database Design**
+## **1\. Database Design**
 
-**1) Design Phases**
+### **1) Design Phases**
 
 Initial phase (초기 단계) 
 
@@ -32,7 +32,7 @@ Final phase (마지막 단계) : 추상적인 데이터 모델 (ER model)에서 
 
 -   Physical Design : 어떤 파일 구조?
 
-**2) Design Alternatives : 유일한 설계가 나올 수 없다.**
+### **2) Design Alternatives : 유일한 설계가 나올 수 없다.**
 
 Bad design은 피해야 한다.
 
@@ -46,20 +46,20 @@ Bad design은 피해야 한다.
 
 Good design에서도 적절한 것을 골라야 한다.
 
-**3) Design Approaches**
+### **3) Design Approaches**
 
 -   Entity Relationship Model (6장) : ER diagram 작성
 -   Normalization (7장) : 설계의 잘못된 점을 파악
 
-#### **2\. Outline of the ER Model**
+## **2\. Outline of the ER Model**
 
-**1) ER model**
+### **1) ER model**
 
 -   ER data Model은 데이터베이스의 전체적인 논리 구조를 나타내는데 용이하게 하기위해 만들어졌다.
 -   3가지 기본 개념으로 이루어진다. (entity sets, relationship sets, attributes)
 -   ERD (Entity Relationship Diagram)은 ER data Model을 그래픽으로 표현한 것이다.
 
-**2) Entity Sets** 
+### **2) Entity Sets** 
 
 -   entity: 하나의 객체, 식별성을  가진다. ex) specific person, company, event...
 -   entity sets: 같은 속성을 공유하는 같은 타입인 객체들의 집합 ex) set of all persons, companies...
@@ -71,7 +71,7 @@ Good design에서도 적절한 것을 골라야 한다.
 </p>
 
 
-**3) Relationship Sets**
+### **3) Relationship Sets**
 
 -   객체간의 관계를 나타낸다. ex) 학생- 지도교수 - 교수
 
@@ -92,6 +92,7 @@ Good design에서도 적절한 것을 골라야 한다.
 <p align="center">
 <img src="/databasedesign/3.PNG"  width="400">
 </p>
+
 (3) Degree
 
 -   degree = 1 (unary relationship), degree = 2 (binary relationship), degree =3 (ternary relationship), degree = n (n-ary relationship) 
@@ -100,7 +101,8 @@ Good design에서도 적절한 것을 골라야 한다.
 <p align="center">
 <img src="/databasedesign/4.png"  width="400">
 </p>
-**4) Attributes types**
+
+### **4) Attributes types**
 
 (1) simple and compossite (합성)
 
@@ -109,6 +111,7 @@ Good design에서도 적절한 것을 골라야 한다.
 <p align="center">
 <img src="/databasedesign/5.PNG"  width="400">
 </p>
+
 (2) single-valued and mulivalued 
 
 -   다중값 속성 : 속성은 하나지만 여러 값을 가짐 ex) 전화번호- 집, 사무실,....
@@ -118,8 +121,9 @@ Good design에서도 적절한 것을 골라야 한다.
 -   다른 속성으로부터 계산될 수 있는 속성 ex) 생일으로부터 나이 도출
 
 <p align="center">
-<img src="/databasedesign/6.PNG"  width="400">
+<img src="/databasedesign/6.PNG"  width="200">
 </p>
+
 \- name, address (composite) : 들여쓰기
 
 \- phone number (multivalued) : { }
@@ -129,7 +133,8 @@ Good design에서도 적절한 것을 골라야 한다.
 <p align="center">
 <img src="/databasedesign/7.PNG"  width="400">
 </p>
-**5) Mapping Cardinality Constraints**
+
+### **5) Mapping Cardinality Constraints**
 
 -   relationship이 존재하는 한 entity에서 다른 entity 몇개의 개체와 대응되는지 나타내는 제약조건이다.
 -   Mapping Cardinality의 종류
@@ -145,15 +150,17 @@ Good design에서도 적절한 것을 골라야 한다.
 <p align="center">
 <img src="/databasedesign/8.PNG"  width="400">
 </p>
+
 -   Cardinality constraints in ERD 
 -   ERD에서 화살표(->)는 1개 대응을 뜻하고 선(-)은 여러개 대응을 뜻한다. 
 
 <p align="center">
 <img src="/databasedesign/9.PNG"  width="400">
 </p>
+
 -   chen의 표기법에서는 화살표를 사용하지 않고 선 위에 '\*, 1'이라고 쓴다.
 
-**6) Total and Partial Participation**
+### **6) Total and Partial Participation**
 
 -   전체 참여 (Total Participation): 전체 참여는 두줄로 표현하고 예시는 아래와 같다.
 -   부분 참여 (Partial Participation): 어떤 entities는 관계에 참여 안할 수 있다. 한줄로 표현, 일반적
@@ -161,10 +168,11 @@ Good design에서도 적절한 것을 골라야 한다.
 <p align="center">
 <img src="/databasedesign/10.PNG"  width="400">
 </p>
+
 -   student와 관계가 없는 instructor가 존재할 수는 있지만 모든 student는 무조건 instructor와 관계가 있어야한다.
 -   어떤 instructor는 student와 관계를 안가지고 있을 수 있다. 즉, 지도교수 업무를 하지 않을 수 있다.
 
-**7) more complex constraints**
+### **7) more complex constraints**
 
 -   선에 mininum, maximum cardinality가 있을 수 있다.
 
@@ -177,9 +185,10 @@ Good design에서도 적절한 것을 골라야 한다.
 <p align="center">
 <img src="/databasedesign/11.PNG"  width="400">
 </p>
+
 -   교수는 한명이 학생을 몇명 전담하든지 상관 없다. 학생은 모두 한명의 지도교수 배정을 받아야한다. 
 
-**8) Primary key**
+### **8) Primary key**
 
 \- ERD가 Table schema로 변환될 때 누가 primary key가 되는가?
 
@@ -198,7 +207,7 @@ Good design에서도 적절한 것을 골라야 한다.
 
 (3) Weak entity sets
 
-**9) Weak entity sets**
+### **9) Weak entity sets**
 
 <p align="center">
 <img src="/databasedesign/12.PNG"  width="400">
@@ -220,7 +229,7 @@ Good design에서도 적절한 것을 골라야 한다.
 
 \* weak entity를 결정할 때는 자체속성 내 primary key가 있는지 확인한다. 
 
-**10) Redundant attributes**
+### **10) Redundant attributes**
 
 <p align="center">
 <img src="/databasedesign/14.PNG"  width="400">
@@ -229,7 +238,7 @@ Good design에서도 적절한 것을 골라야 한다.
 -   학과 속성이 student의 속성으로도 존재하고, relationship도 맺어져 있음
 -   중복성 문제 -> dept\_name 속성을 student 객체에서 삭제한다.
 
-**11) ERD example**
+### **11) ERD example**
 
 <p align="center">
 <img src="/databasedesign/15.PNG"  width="400">

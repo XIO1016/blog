@@ -1,18 +1,18 @@
 ---
-title: [데이터베이스 설계] Database Design Normalization
-slug: databasedesign3
+title: 데이터베이스 설계) Database Design Normalization
+slug: data-base3
 category: CS
 date: 2023.02.01
 description: 데이터베이스 설계 기초
-img: database1.png
+img: database3.PNG
 author: XIO1016
 visibility: true
 ---
 _이 글은 "Database System Concepts, 7th edition"을 바탕으로 작성되었습니다._
 
-#### **1\. Overview of Normalization**
+## **1\. Overview of Normalization**
 
-#### 1) Features of Good Relational Designs
+### 1) Features of Good Relational Designs
 
 -   instructor과 department table을 합쳤을 때, good design?
 
@@ -24,14 +24,14 @@ _이 글은 "Database System Concepts, 7th edition"을 바탕으로 작성되었
 -   incomplete -> new department를 추가했을때, 교수가 null값인 상황 -> ID에 null값이 들어감(삽입 이상)
 -   mozart를 삭제했을때 music과도 사라지게 됨 (삭제 이상)
 
-#### 2) A combined schema without repetition
+### 2) A combined schema without repetition
 
 -   combine하는게 꼭 나쁘지는 않음
 -   sec\_class(sec\_id, building, room\_number) + section(course\_id, sec\_id, semester, year)
 -   section(course\_id, sc\_id, semester, year, building, room\_number)
 -   no repetition, 합치는게 맞다.
 
-#### 3) Decomposition
+### 3) Decomposition
 
 -   문제가 되는 table을 분해
 -   Not all decomposition are good
@@ -46,13 +46,12 @@ _이 글은 "Database System Concepts, 7th edition"을 바탕으로 작성되었
 -   kim이라는 동명이인 때문에 서로 다른 사람이 join됨
 -   lossy decomposition (정확성 손실 분해)
 
-#### 4) lossless decomposition (무손실 분해)
+### 4) lossless decomposition (무손실 분해)
 
 -   R = R1 ∪ R2 로 분해
 <p align="center">
     <img src="/databasedesign/39.PNG"  width="400">
 </p>
-[##_Image|kage@bJxB82/btrmZ1QaKAT/Rd6mfnr5q9NK3kvUCOOKOK/img.png|CDM|1.3|{"originWidth":315,"originHeight":57,"style":"alignCenter","width":276,"height":50,"caption":"lossy할 경우"}_##]
 
 -   lossy decomposition-> join한 table이 original보다 크다
 
@@ -60,13 +59,13 @@ _이 글은 "Database System Concepts, 7th edition"을 바탕으로 작성되었
 <img src="/databasedesign/40.PNG"  width="400">
 </p>
 
-#### 5) Normalization theory
+### 5) Normalization theory
 
 -   R이 good form이 아니면 decompose한다. -> 계속 분해하여 n개의 table
 -   n개가 다 bcnf가 되는가-> good form, 무손실 분해
 -   functional dependency 함수 종속
 
-#### 6) Functional dependency
+### 6) Functional dependency
 
 -   다양한 제약들이 데이터에 있다
 -   X와 Y를 임의의 속성 집합이라 할때, X의 값이 Y의 값을 유일하게 결정할 경우.
@@ -80,13 +79,13 @@ _이 글은 "Database System Concepts, 7th edition"을 바탕으로 작성되었
 -   t1\[x\] =t2\[x\]  =>  t1\[y\] =t2\[y\]
 -   y->x hold, x->y not hold
 
-#### 7) Closure a set of functional dependencies
+### 7) Closure a set of functional dependencies
 
 -   함수적 종속성의 집합인 F가 있다고 할 때, F로부터 자연스럽게 유도되는 함수적 종속성이 있다.
 -   추론: A->B, B->C, => A->C (transitive)
 -   이렇게 나온 모든 함수적 종속성의 집합을 F의 closure라고 하고 기호로 F+로 표시한다
 
-#### 8) Keys and Functional Dependencies
+### 8) Keys and Functional Dependencies
 
 -   K가 릴레이션 스키마 R의 슈퍼키(고유식별자)이면 K→R이다.
 -   K가 릴레이션 스키마 R의 후보키(고유식별자 중 불필요한 요소 제외해 minimal)이면  K→R이다.
@@ -104,7 +103,7 @@ _이 글은 "Database System Concepts, 7th edition"을 바탕으로 작성되었
 -   name-> name
 -   일반적으로 b가 a에 포함되면, a→b 은 Trivial 이다.
 
-#### 9) Lossless Decomposition
+### 9) Lossless Decomposition
 
 -   무손실 분해인지 판별하는 법
 
@@ -118,7 +117,7 @@ _이 글은 "Database System Concepts, 7th edition"을 바탕으로 작성되었
 <img src="/databasedesign/42.PNG"  width="400">
 </p>
 
-#### 10) Dependency Preservation
+### 10) Dependency Preservation
 
 -   매번 데이터베이스가 업데이트 될 때마다 종속성 체크는 비효율.
 -   분해된 릴레이션들 중 하나의 릴레이션에서만 종속성이 확인되면 종속성 보존.
@@ -126,7 +125,7 @@ _이 글은 "Database System Concepts, 7th edition"을 바탕으로 작성되었
 -   함부로 분해하면 종속성 보존 안됨. 제약 조건을 보고 종속성에 영향 없게 분해.
 
 
-#### 11) Boyce -Codd Normal Form (BCNF)
+### 11) Boyce -Codd Normal Form (BCNF)
 
 -   R이 bcnf인가? -> 테이블의 함수 종속을 알아야함. (F+)
 -   F+ 중 trivial 한 것과 non-trivial 한 것이 있음
@@ -142,7 +141,7 @@ example)
 -   dept\_name이 superkey가 아니기 때문
 -   instructor와 department로 나누면 둘다 bcnf
 
-#### 12) Decomposing a schema into BCNF
+### 12) Decomposing a schema into BCNF
 
 -   table R이 bcnf가 아니면 분해한다. (a->b,  nontrivial FD에서 고유식별자가 아닐때)
 -   a∪b: 문제가 되는 함수종속의 결정자와 종속자를 독립시킨다.
