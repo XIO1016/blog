@@ -22,8 +22,8 @@
             <span>Git</span>
           </div>
           <div class="item">
-            <img src="@/assets/images/skills-assets/MongoDB.svg" />
-            <span>MongoDB</span>
+            <img src="@/assets/images/skills-assets/django.png" />
+            <span>Django</span>
           </div>
           <div class="item">
             <img src="@/assets/images/skills-assets/Firebase.svg" />
