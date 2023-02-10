@@ -1,7 +1,7 @@
 ---
 title: 자바 복습 2
 slug: java-intermediate2
-category: java
+category: spring
 date: 2023.01.15
 description: 프로그래머스 자바 중급 강의를 듣고 배운점
 img: java.png
